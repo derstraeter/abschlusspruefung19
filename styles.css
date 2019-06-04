@@ -252,10 +252,10 @@
     padding: 3rem;
 		background: #fff;
 		width: 100%;
-    border-top-left-radius: 500px 40%;
-    border-top-right-radius: 500px 40%;
-    border-bottom-left-radius: 500px 40%;
-    border-bottom-right-radius: 500px 40%;
+    border-top-left-radius: 10% 40%;
+    border-top-right-radius: 10% 40%;
+    border-bottom-left-radius: 10% 40%;
+    border-bottom-right-radius: 10% 40%;
     margin: 3rem 0;
   }
 
