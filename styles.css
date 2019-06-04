@@ -1,26 +1,26 @@
 
 
-@media (width: 320px) {
+@media (max-width: 1024px) {
   *,
   *::after,
   *::before {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
   }
 
 	body {
 		background: #fff8e8;
-    color: #4e4e4e;
-    max-width: 320px;
+		color: #4e4e4e;
+		font-size: 100%;
 	}
 
   h1 {
-    background: url(assets/img/hg-1.png);
+		background: url(assets/img/hg-1.png);
+		background-size: cover;
+		background-repeat: no-repeat;
     margin-bottom: 3rem;
     width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
+		text-align: center;
   }
 
 	h1,
@@ -87,38 +87,37 @@
 		width: 100%;
 		color: #4e4e4e;
 	}
-
 	.site-menu {
-		position: absolute;
+		position: fixed;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		box-sizing: border-box;
 		top: 0;
-		right: 0;
-		max-width: 320px;
+		right: -320px;
+		width: 320px;
 		height: 100vh;
 		padding: 50px 30px;
 		background-color: #fff8e8;
 		transition: all 600ms cubic-bezier(0.4, 0, 0.2, 1);
-		transform: translateX(100%);
-		will-change: transform;
 	}
 
 	.site-menu ul {
 		padding: 0;
 		list-style-type: none;
 	}
+
 	.site-menu ul li {
 		padding: 10px 30px;
 	}
+
 	#site-menu-trigger {
 		z-index: 10;
 		display: none;
 		height: 30px;
 	}
 	#site-menu-trigger:checked ~ .site-menu {
-		transform: translateX(0%);
+		transform: translate3d(-320px, 0, 0);
 	}
 	#site-menu-trigger:checked ~ label[for="site-menu-trigger"] {
 		transform: translateX(-8px) scale(1.05);
@@ -180,14 +179,16 @@
 
 	.hero-wrapper {
 		width: 100%;
-		height: 35vh;
+		height: 50vh;
 		background: url(assets/img/hero-b.jpg);
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: 100% auto;
 	}
 
 	.begruessung-wrapper {
 		padding: 2em;
+		max-width: 500px;
+		margin: 0 auto;
 		text-align: center;
   }
   
@@ -206,7 +207,7 @@
 	}
 
 	.begruessung-wrapper span {
-		font-size: 12px;
+		font-size: 0.75rem;
 	}
 
 	.begruessung-wrapper p {
@@ -218,7 +219,7 @@
     height: 20vh;
     background: url(assets/img/weizen.png);
     background-repeat: no-repeat;
-    background-size: cover;
+		background-size: 100% auto;
     margin-bottom: 2rem;
   }
 
@@ -231,6 +232,11 @@
     padding: 2em;
   }
 
+	.intro-wrapper p {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
   .intro-wrapper img{
     width: 250px;
     margin-bottom: 1rem;
@@ -238,7 +244,8 @@
 
   .mit-hg {
     padding: 3rem;
-    background: #fff;
+		background: #fff;
+		width: 100%;
     border-top-left-radius: 500px 40%;
     border-top-right-radius: 500px 40%;
     border-bottom-left-radius: 500px 40%;
@@ -260,9 +267,6 @@
     z-index: -1;
   }
 
-  .anmeldung {
-    padding: 2em;
-  }
 
   form h2 {
     margin-top: 2rem;
@@ -271,7 +275,7 @@
   input[type=text], input[type=number], input[type=e-mail] {
     width: 100%;
     padding: 15px;
-    font-size: 16px;
+    font-size: 1rem;
     border: 1px solid white;
     border-radius: 5px;
     box-sizing: border-box;
@@ -294,15 +298,26 @@
     margin-right: 1rem;
     display: inline;
   }
+	
+	.terminwahl {
+		list-style-type: none;
+	}
 
-  .terminwahl p {
-    margin: 1rem 0;
-  }
+	.terminwahl li {
+		margin: 1rem 0;
+		font-family: 'Lato',sans-serif;
+	}
+
+	.button-wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 2rem;
+	}
 
   .btn-primary {
     padding: 7px 20px;
     font-family: "Zilla Slab", serif;
-    font-size: 12px;
+    font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
     background: #4e4e4e;
@@ -313,7 +328,7 @@
   .btn-secondary {
     padding: 7px 20px;
     font-family: "Zilla Slab", serif;
-    font-size: 12px;
+    font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
     color: #4e4e4e;
@@ -321,5 +336,56 @@
     border: 1px solid #4e4e4e;
   }
 
+	.bestellung form {
+		margin-top: 2rem;
+	}
 
+	.rechnungsadresse {
+		margin-top: 2rem;
+	}
+
+	.mehlauswahl {
+		list-style-type: none;
+	}
+
+	.mehlauswahl li {
+		margin: 1rem 0;
+	}
+
+	.mehlauswahl p {
+		display: inline;
+		font-weight: 700;
+	}
+
+	.separator {
+		height: 2px;
+		width: 100%;
+		border-bottom: 1px solid #4e4e4e;
+	}
+
+	.kontakt {
+		text-align: center;
+	}
+
+	.kontakt-bg {
+		margin: 0 auto;
+		width: 300px;
+		height: 100%;
+		background: url(assets/svg/kontakt.svg);
+		background-position-x: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		fill: #fff;
+	}
+
+	.kontakt img {
+		height: 70px;
+		margin-bottom: 2rem;
+	}
+}
+
+@media (min-width: 1023px) {
+	body {
+		font-size: 120%;
+	}
 }
