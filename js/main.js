@@ -1,5 +1,18 @@
-new Glide('.glide', {
+const glide = new Glide('.glide', {
   type: 'carousel',
-  startAt: 0,
-  perView: 3
+}).mount();
+
+glide.on('run.before', function () {
+  $('.recipe-info').slideUp();
+})
+
+$('.expand-recipe-info').click((e)=>{
+
+  const buttonParent = e.target.parentNode;
+
+  if ($(buttonParent).hasClass('glide__slide--active')) {
+      const recipeInfo = e.target.nextElementSibling;
+
+      $(recipeInfo).slideToggle();
+  }    
 })

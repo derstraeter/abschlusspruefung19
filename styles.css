@@ -126,6 +126,7 @@
 	}
 
 	.navigation {
+    padding: 6rem;
     list-style-type: none;
     display: flex;
     height: 100%;
@@ -143,7 +144,7 @@
 		font-size: 2rem;
 		transition: all 200ms ease-in-out;
 		color: #4e4e4e;
-		font-weight: 600;
+		font-weight: 400;
   }
 
 	.navigation li a::after {
@@ -189,10 +190,10 @@
 
 	.hero-wrapper {
 		width: 100%;
-		height: 30%;
+		height: 50vh;
 		background: url(assets/img/hero-b.jpg);
 		background-repeat: no-repeat;
-		background-size: 100% auto;
+		background-size: cover;
 	}
 
 	.begruessung-wrapper {
@@ -201,19 +202,23 @@
 		margin: 0 auto;
 		text-align: center;
   }
+
+  .begruessung-wrapper span {
+    font-family: 'Zilla Slab', serif;
+  }
   
   .begruessung-headline {
     background: url();
     margin-bottom: 2rem;
+    padding: 0;
   }
 
 	.begruessung-wrapper svg {
     position: absolute;
     height: 34vh;
     fill: #fff;
-    padding: 0 2rem;
 		z-index: -1;
-		margin-top: 3rem;
+    margin: 0 auto;
 	}
 
 	.begruessung-wrapper span {
@@ -226,7 +231,7 @@
   
   .stoerer {
     width: 100%;
-    height: 20vh;
+    min-height: 50vh;
     background: url(assets/img/weizen.png);
     background-repeat: no-repeat;
 		background-size: 100% auto;
