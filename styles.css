@@ -8,6 +8,12 @@
     padding: 0;
   }
 
+	a {
+		font-family: 'Zilla Serif', serif;
+		text-decoration: none;
+		color: #4e4e4e;
+	}
+
 	body {
 		background: #fff8e8;
 		color: #4e4e4e;
@@ -179,7 +185,7 @@
 
 	.hero-wrapper {
 		width: 100%;
-		height: 50vh;
+		height: 30%;
 		background: url(assets/img/hero-b.jpg);
 		background-repeat: no-repeat;
 		background-size: 100% auto;
@@ -369,8 +375,7 @@
 
 	.kontakt-bg {
 		margin: 0 auto;
-		width: 300px;
-		height: 100%;
+		width: 900px;
 		background: url(assets/svg/kontakt.svg);
 		background-position-x: center;
 		background-repeat: no-repeat;
@@ -381,6 +386,58 @@
 	.kontakt img {
 		height: 70px;
 		margin-bottom: 2rem;
+	}
+
+	footer {
+		padding: 2rem;
+		background: #4e4e4e;
+		box-sizing: border-box;
+		border-radius: 50% 50% 0 0;
+	}
+
+	footer a {
+		color: #fff8e8;
+		margin-left: 1rem;
+	}
+	
+	.footer-top-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.footer-logo {
+		fill: #fff8e8;
+		width: 80px;
+		height: auto;
+	}
+
+	.social-media-footer {
+		margin-left: 1em;
+	}
+
+	.social-media-footer img{
+		height: 30px;
+		fill: #fff8e8;
+	}
+
+	.link-group {
+		margin-top: 1rem;
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.imprint-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0 5rem 5rem 5rem; 
+	}
+
+	address {
+		text-decoration: none;
+		font-style: none;
+		margin-bottom: 1rem;
 	}
 }
 
