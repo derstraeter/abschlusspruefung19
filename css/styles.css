@@ -30,6 +30,7 @@
     width: 100%;
     padding: 2rem 0;
 		text-align: center;
+		font-weight: 400;
   }
 
 	h1,
@@ -210,7 +211,8 @@
   }
   
   .begruessung-headline {
-    background: url();
+		background: url();
+		font-weight: 400;
     margin-bottom: 2rem;
     padding: 0;
   }
@@ -237,7 +239,7 @@
     background: url(../assets/img/weizen.png);
     background-repeat: no-repeat;
 		background-size: 100% auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   /* BEGINN INTRO SEKTION */
@@ -364,13 +366,11 @@
 
 	.rezept-bild {
 		display: block;
-		padding: 0 4rem;
 		width: 100%
 	 }
 
 	.rezept h3 {
 		width: 100;
-		margin: 0 4rem;
 		padding: 2rem;
 		color:#fff8e8;
 		background: #4e4e4e;
@@ -397,7 +397,7 @@
 		max-width: 881px;
 		margin: 0 auto;
 		margin-bottom: 3rem;
-		padding: 2rem 4rem;
+		padding: 2rem 0;
 		background: white;
 	}
 
@@ -406,6 +406,10 @@
 	.rezept-info p {
 		list-style-type: none;
 		padding: 1rem 0 1rem 5rem;
+	}
+
+	.rezept {
+		padding: 0 4rem;
 	}
 	/* MEHLBESTELLUNG */
 	.bestellung form {
