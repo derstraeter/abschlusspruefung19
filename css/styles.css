@@ -426,7 +426,7 @@
 
 	.mehlauswahl p {
 		display: inline;
-		font-weight: 700;
+		font-weight: 500;
 	}
 
 	.separator {
@@ -497,7 +497,7 @@
 		justify-content: space-around;
 		font-family: 'Zilla Slab', serif;
 	}
-	
+
 	/* IMPRESSUM */
 
 	.imprint-wrapper {
