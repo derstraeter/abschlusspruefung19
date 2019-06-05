@@ -1,0 +1,512 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato|Zilla+Slab&display=swap&subset=latin-ext");
+
+@media (max-width: 1024px) {
+	a {
+		font-family: 'Zilla Serif', serif;
+		text-decoration: none;
+		color: #4e4e4e;
+	}
+
+	body {
+		background: #fff8e8;
+		color: #4e4e4e;
+		font-size: 100%;
+	}
+
+  h1 {
+		background: url(../assets/img/hg-1.png);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+    margin-bottom: 3rem;
+    width: 100%;
+    padding: 2rem 0;
+		text-align: center;
+  }
+
+	h1,
+  h2 {
+		font-family: "Zilla Slab", serif;
+    color: #4e4e4e;
+  }
+  
+  h3 {
+    font-family: "Zilla Slab", serif;
+    color: #4e4e4e;
+  }
+
+	p {
+		font-family: "Lato", sans-serif;
+		color: #4e4e4e;
+  }
+
+  /* NAV BAR */
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    background: #fff;
+    padding: 1rem 1.5rem;
+  }
+  
+	.logo-wrapper {
+		width: 80px;
+		height: auto;
+  }
+
+  .site-menu-button {
+    display: flex;
+  }
+
+  .site-menu-button input {
+		z-index: 10;
+		display: none;
+		height: 30px;
+  }
+
+  .site-menu-button label {
+    position: relative;
+    width: 50px;
+		height: 50px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .site-menu-button label:hover {
+    background: #fff;
+  }
+  
+  .site-menu-button svg {
+		width: 32px;
+		height: 32px;
+  }
+
+  .site-menu-button .trigger-close {
+		display: none;
+  }
+  
+  .site-menu-button input:checked ~ label .trigger-menu {
+    display: none;
+  }
+
+  .site-menu-button input:checked ~ label .trigger-close {
+    display: block;
+    position: fixed;
+  }
+
+  .site-menu-button input:checked ~ .site-menu {
+		transform: translate3d(-100%, 0, 0);
+	}
+  
+/* LINKS IN NAV */
+	.site-menu {
+    position: fixed;
+    display: flex;
+		flex-direction: column;
+    justify-content: space-evenly;
+		top: 0;
+		right: -100%;
+		width: 100%;
+		height: 100vh;
+		padding: 110px 1.5rem 1.5rem 1.5rem;
+		background-color: #fff8e8;
+		transition: all 600ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.navigation {
+    padding: 6rem;
+    list-style-type: none;
+    display: flex;
+    height: 100%;
+		flex-direction: column;
+    justify-content: space-around;
+	}
+
+	.navigation li {
+		padding: 10px 0;
+  }
+
+  .navigation li a {
+    text-decoration: none;
+		font-family: "Zilla Slab", serif;
+		font-size: 2rem;
+		transition: all 200ms ease-in-out;
+		color: #4e4e4e;
+		font-weight: 400;
+  }
+
+	.navigation li a::after {
+    content: "";
+		display: block;
+		left: 0;
+		width: 0;
+		height: 2px;
+		transition: width 0.2s;
+	}
+
+	.navigation li a:hover {
+		color: #dedede;
+	}
+
+	.navigation li a:hover::after {
+		width: 100%;
+		background: #4e4e4e;
+  }
+
+	.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
+  }
+
+  .social-media a {
+    display: block;
+  }
+  
+  .social-media a:hover {
+    background: #fff;
+  }
+
+	.social-media img {
+		height: 120px;
+		width: 120px;
+	}
+
+  /* HEAD-IMAGE */
+
+	.hero-wrapper {
+		width: 100%;
+		height: 50vh;
+		background: url(../assets/img/hero-b.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
+
+	.begruessung-wrapper {
+		padding: 2em;
+		max-width: 500px;
+		margin: 0 auto;
+		text-align: center;
+  }
+
+  .begruessung-wrapper span {
+    font-family: 'Zilla Slab', serif;
+  }
+  
+  .begruessung-headline {
+    background: url();
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+
+	.begruessung-wrapper svg {
+    position: absolute;
+    height: 34vh;
+    fill: #fff;
+		z-index: -1;
+    margin: 0 auto;
+	}
+
+	.begruessung-wrapper span {
+		font-size: 0.75rem;
+	}
+
+	.begruessung-wrapper p {
+		margin: 1rem;
+  }
+  
+  .stoerer {
+    width: 100%;
+    min-height: 50vh;
+    background: url(../assets/img/weizen.png);
+    background-repeat: no-repeat;
+		background-size: 100% auto;
+    margin-bottom: 2rem;
+  }
+
+  /* BEGINN INTRO SEKTION */
+  .intro-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+	.intro-wrapper p {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+  .intro-wrapper img{
+    width: 250px;
+    margin-bottom: 1rem;
+  }
+
+  .mit-hg {
+		background: url(../assets/svg/white-bg.svg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		width: 100%;
+    padding: 3rem;
+    margin: 3rem 0;
+  }
+
+  .kosten-teaser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin-bottom: 2rem;
+  }
+
+  .kosten-teaser svg{
+    position: absolute;
+    z-index: -1;
+  }
+
+  .anmeldung,
+  .bestellung {
+    padding: 0 3rem;
+    margin-bottom: 3rem;
+  }
+
+  form h2 {
+    margin-top: 2rem;
+  }
+
+  input[type=text], input[type=number], input[type=e-mail] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .form-label {
+    margin: 1rem 0;
+  }
+
+  .kombinator {
+    display: flex;
+  }
+
+  .kombinator input[name=hnr] {
+    width:25%;
+    margin-left: 5px;
+  }
+
+  input[type=radio] {
+    margin-right: 1rem;
+    display: inline;
+  }
+	
+	.terminwahl {
+		list-style-type: none;
+	}
+
+	.terminwahl li {
+		margin: 1rem 0;
+		font-family: 'Lato',sans-serif;
+	}
+
+	.intro-wrapper .button-wrapper {
+		margin-bottom: 2rem;
+	}
+
+	.button-wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 2rem;
+	}
+
+  .btn-primary {
+    padding: 7px 20px;
+    font-family: "Zilla Slab", serif;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #4e4e4e;
+    color: #fff8e8;
+    border: 0;
+  }
+  
+  .btn-secondary {
+    padding: 7px 20px;
+    font-family: "Zilla Slab", serif;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #4e4e4e;
+    background: #fff8e8;
+    border: 1px solid #4e4e4e;
+	}
+
+ /* REZEPT SLIDER */
+
+	.rezept-bild {
+		display: block;
+		padding: 0 4rem;
+		width: 100%
+	 }
+
+	.rezept h3 {
+		width: 100;
+		margin: 0 4rem;
+		padding: 2rem;
+		color:#fff8e8;
+		background: #4e4e4e;
+		display: block;
+		text-align: center;
+	}
+
+	.expand-recipe-info {
+		max-width: 881px;
+		width: 100%;
+		padding: 1rem;
+		display: block;
+		margin: 0 auto;
+		border: 0;
+		background: none;
+		background: #AA866B;
+		color: #fff8e8;
+		font-size: 1rem;
+		cursor: pointer;
+		font-family: 'Zilla Slab', serif;
+	}
+
+	.rezept-info {
+		max-width: 881px;
+		margin: 0 auto;
+		margin-bottom: 3rem;
+		padding: 2rem 4rem;
+		background: white;
+	}
+
+	.rezept-info h4,
+	.rezept-info ul,
+	.rezept-info p {
+		list-style-type: none;
+		padding: 1rem 0 1rem 5rem;
+	}
+
+	.bestellung form {
+		margin-top: 2rem;
+	}
+
+	.rechnungsadresse {
+		margin-top: 2rem;
+	}
+
+	.mehlauswahl {
+		list-style-type: none;
+	}
+
+	.mehlauswahl li {
+		margin: 1rem 0;
+	}
+
+	.mehlauswahl p {
+		display: inline;
+		font-weight: 700;
+	}
+
+	.separator {
+		height: 2px;
+		width: 100%;
+		border-bottom: 1px solid #4e4e4e;
+	}
+
+	.kontakt {
+    text-align: center;
+    margin-bottom: 3rem;
+	}
+
+	.kontakt-bg {
+		margin: 0 auto;
+		width: 900px;
+		background: url(../assets/svg/kontakt.svg);
+		background-position-x: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		fill: #fff;
+	}
+
+	.kontakt img {
+		height: 70px;
+		margin-bottom: 2rem;
+	}
+
+	footer {
+		padding: 2rem;
+		background: #4e4e4e;
+		box-sizing: border-box;
+		border-radius: 50% 50% 0 0;
+	}
+
+	footer a {
+		color: #fff8e8;
+		margin-left: 1rem;
+	}
+	
+	.footer-top-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.footer-logo {
+		fill: #fff8e8;
+		width: 80px;
+		height: auto;
+	}
+
+	.social-media-footer {
+		margin-left: 1em;
+	}
+
+	.social-media-footer img{
+		height: 30px;
+		fill: #fff8e8;
+	}
+
+	.link-group {
+		margin-top: 1rem;
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.imprint-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0 5rem 5rem 5rem; 
+	}
+
+	address {
+		text-decoration: none;
+		font-style: none;
+		margin-bottom: 1rem;
+	}
+}
+
+@media (min-width: 1023px) {
+	body {
+		font-size: 120%;
+	}
+}
