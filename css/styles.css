@@ -5,10 +5,11 @@
   margin: 0;
   padding: 0;
 }
-
+/* GOOGLE FONTS IMPORT: ZILLA SLAB, LATO */
 @import url("https://fonts.googleapis.com/css?family=Lato|Zilla+Slab&display=swap&subset=latin-ext");
 
 @media (max-width: 1024px) {
+	/* GLOBAL */
 	a {
 		font-family: 'Zilla Serif', serif;
 		text-decoration: none;
@@ -62,7 +63,7 @@
 		width: 80px;
 		height: auto;
   }
-
+	/* HAMBURGER MENUE */
   .site-menu-button {
     display: flex;
   }
@@ -164,7 +165,7 @@
 		width: 100%;
 		background: #4e4e4e;
   }
-
+	/* SOCIAL MEDIA ICONS - NAV */
 	.social-media {
     display: flex;
     flex-direction: row;
@@ -195,7 +196,8 @@
 		background-repeat: no-repeat;
 		background-size: 100% auto;
 	}
-
+	
+	/* EINLEITENDER TEXT */
 	.begruessung-wrapper {
 		padding: 2em;
 		max-width: 500px;
@@ -263,8 +265,9 @@
 		width: 100%;
     padding: 3rem;
     margin: 3rem 0;
-  }
-
+	}
+	
+/* Aufreisser  */
   .kosten-teaser {
     display: flex;
     flex-direction: column;
@@ -278,7 +281,7 @@
     position: absolute;
     z-index: -1;
   }
-
+/* ANMELDUNG MUEHLENBAECKEREI */
   .anmeldung,
   .bestellung {
     padding: 0 3rem;
@@ -301,7 +304,7 @@
   .form-label {
     margin: 1rem 0;
   }
-
+	/* STRASSE UND HAUSNUMMER IN EINER ZEILE */
   .kombinator {
     display: flex;
   }
@@ -404,7 +407,7 @@
 		list-style-type: none;
 		padding: 1rem 0 1rem 5rem;
 	}
-
+	/* MEHLBESTELLUNG */
 	.bestellung form {
 		margin-top: 2rem;
 	}
@@ -432,6 +435,8 @@
 		border-bottom: 1px solid #4e4e4e;
 	}
 
+	/* KONTAKTBEREICH */
+	
 	.kontakt {
     text-align: center;
     margin-bottom: 3rem;
@@ -483,13 +488,17 @@
 	.social-media-footer img{
 		height: 30px;
 		fill: #fff8e8;
+		margin-right: 1rem;
 	}
 
 	.link-group {
 		margin-top: 1rem;
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: space-around;
+		font-family: 'Zilla Slab', serif;
 	}
+	
+	/* IMPRESSUM */
 
 	.imprint-wrapper {
 		display: flex;
